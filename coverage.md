@@ -10,10 +10,19 @@ Every function introduced **or modified** by an edit **must** be exercised by at
 - New or modified async handlers
 - Helper/utility functions, even private ones
 
+## Language-Specific Instructions
+
+For tooling commands and language-specific details, see:
+
+| Language | Doc |
+|----------|-----|
+| Rust | [rust/coverage.md](rust/coverage.md) |
+| TypeScript | [typescript/coverage.md](typescript/coverage.md) |
+
 ## Workflow
 
 1. **Write the code and its tests** together in the same PR/commit.
-2. **Generate the coverage report** after all tests pass (see project-specific build-and-test docs for commands).
+2. **Generate the coverage report** after all tests pass (see language-specific docs above).
 3. **Inspect uncovered functions.** Use your project's coverage tooling to identify gaps.
 4. **Iterate** until every newly added function appears as covered (non-zero hit count) in the report.
 
@@ -27,4 +36,4 @@ Every function introduced **or modified** by an edit **must** be exercised by at
 
 - [ ] All new functions have at least one test path that calls them
 - [ ] Coverage report shows 100% function coverage for every file you modified
-- [ ] All tests pass (see project-specific build-and-test docs)
+- [ ] All tests pass (see language-specific docs above)

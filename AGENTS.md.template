@@ -34,6 +34,15 @@ These docs apply to all projects using this agent structure:
 | [agents/coverage.md](agents/coverage.md) | Any edit that adds or modifies functions (100% function coverage required) |
 | [agents/incremental-work.md](agents/incremental-work.md) | Managing a work file for a multi-increment task |
 
+### Language-Specific Docs
+
+Load the appropriate language-specific doc alongside the generic one:
+
+| Doc | When to load |
+|---|---|
+| [agents/rust/coverage.md](agents/rust/coverage.md) | Rust projects: coverage tooling commands |
+| [agents/typescript/coverage.md](agents/typescript/coverage.md) | TypeScript projects: coverage tooling commands |
+
 ## Project-Specific Docs
 
 <!-- Add your project-specific docs here. Examples:

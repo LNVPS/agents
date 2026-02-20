@@ -8,8 +8,12 @@ A reusable set of coding agent guidelines that can be shared across multiple rep
 .
 ├── AGENTS.md.template      # Template for your project's AGENTS.md
 ├── bug-fixes.md
-├── coverage.md
+├── coverage.md             # Base coverage rules (language-agnostic)
 ├── incremental-work.md
+├── rust/
+│   └── coverage.md         # Rust-specific coverage tooling
+├── typescript/
+│   └── coverage.md         # TypeScript-specific coverage tooling
 └── README.md
 ```
 
@@ -63,6 +67,17 @@ The generic guidelines cover:
 - **bug-fixes.md** - Regression test requirements for bug fixes
 - **coverage.md** - 100% function coverage policy for new/modified code  
 - **incremental-work.md** - Work file format for tracking multi-session tasks
+
+## Language-Specific Guidelines
+
+Language-specific docs are organized in subdirectories:
+
+- **rust/** - Rust-specific tooling and commands
+  - `coverage.md` - cargo-llvm-cov / cargo-tarpaulin instructions
+- **typescript/** - TypeScript-specific tooling and commands
+  - `coverage.md` - Jest/Vitest/c8 coverage instructions
+
+Projects should reference both the generic doc and the appropriate language-specific doc. For example, a Rust project would load both `coverage.md` and `rust/coverage.md`.
 
 ## Contributing
 
