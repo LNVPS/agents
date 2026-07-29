@@ -27,9 +27,11 @@ Check `work/` for an active task file on the same topic before starting new work
 
 ## Git Push
 
-**Never push commits unless the user explicitly asks you to push in that specific message.** A prior request to push earlier in the session does not carry forward. Always wait for an explicit "push" instruction each time.
+**Pushing to a PR/feature branch never needs confirmation** — push whenever there's something worth sharing on it (after a commit, after addressing review feedback). Pushing to `main`/`master` is different: it always needs the user's explicit go-ahead in that specific message, and a prior push request does not carry forward to a later main/master push.
 
-When asked to push, use the HTTPS URL directly (SSH keys are typically not available):
+Check the current branch first (`git branch --show-current`) — if it's `main`/`master`, stop and ask before pushing.
+
+Use the HTTPS URL directly (SSH keys are typically not available):
 
 ```bash
 git push https://github.com/[ORG]/[REPO].git
