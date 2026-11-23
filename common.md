@@ -30,7 +30,7 @@ Check `work/` for an active task file on the same topic before starting new work
 
 Keep comments short. A line or two saying why is enough; delete anything that restates the code.
 
-**Never name a specific app in source or comments.** Apps are rows in the database, not fixtures in the code — `// e.g. mariadb` is wrong the day the catalog changes. Describe the property instead: "a service whose entrypoint must start as root". Test fixtures may use real app names; they are data.
+**Never name a specific app in source or comments.** Apps are rows in the database, not fixtures in the code: `// e.g. mariadb` is wrong the day the catalog changes. Describe the property instead: "a service whose entrypoint must start as root". Test fixtures may use real app names; they are data.
 
 ## Git Push
 
