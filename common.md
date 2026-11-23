@@ -24,6 +24,13 @@ Check `work/` for an active task file on the same topic before starting new work
 
 - Never auto-commit changes. Always ask the user before committing.
 - Before committing, re-read `AGENTS.md` to load any required context documents for the changes being committed.
+- Keep the message short: a subject line, and two or three lines of body if the change needs them. Nobody reads more.
+
+## Comments
+
+Keep comments short. A line or two saying why is enough; delete anything that restates the code.
+
+**Never name a specific app in source or comments.** Apps are rows in the database, not fixtures in the code: `// e.g. mariadb` is wrong the day the catalog changes. Describe the property instead: "a service whose entrypoint must start as root". Test fixtures may use real app names; they are data.
 
 ## Git Push
 
